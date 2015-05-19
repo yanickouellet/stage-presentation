@@ -50,7 +50,7 @@
                         <li>Spektrum, c'est quoi?</li>
                         <li>Et moi, j'y fais quoi?</li>
                         <li>Mes projets</li>
-                        <li>Ce que ça m'a rapporté</li>
+                        <li>Ce que ça m'a apporté</li>
                         <li>Conclusion</li>
                     </ul>
                 </section>
@@ -62,7 +62,7 @@
                             <li>Applications web complexes + sites web</li>
                             <li>Programme de Startup</li>
                             <li>Snipcart</li>
-                        </ul>j
+                        </ul>
                     </aside>
                 </section>
                 <section>
@@ -82,7 +82,7 @@
                     </section>
                     <section>
                         <ul>
-                            <li>Aucun formalisme</li>
+                            <li>Rien de formel</li>
                             <li class="fragment">Formalisme != Professionnalisme</li>
                             <li class="fragment">Basé sur la confiance</li>
                         </ul>
@@ -107,6 +107,189 @@
                             <li>Grande expérience avec les systèmes complexes et les méthodes Agiles</li>
                         </ul>
                     </section>
+                </section>
+                <section>
+                    <h2>Mon rôle chez Spektrum</h2>
+                    <section>
+                        <h4>Équipement</h4>
+                        <ul>
+                            <li>Macbook Pro (i7, 16Go RAM, 512Go SSD, sur Windows)</li>
+                            <li>Un deuxième écran</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>Technologies / Logiciels</h4>
+                        <ul>
+                            <li class="fragment" >ASP.NET MVC5 avec EntityFramework</li>
+                            <li class="fragment">Visual Studio (avec un mode Vim bien sûr)</li>
+                            <li class="fragment">NUnit pour les tests unitaires</li>
+                            <li class="fragment">Sélénium pour les tests d'acceptation</li>
+                            <li class="fragment">AppVeyor pour le déploiement continu</li>
+                            <li class="fragment">Windows Azure pour l'hébergement</li>
+                            <li class="fragment"><strong>GIT</strong></li>
+                            <li class="fragment">Pivotal Tracker pour la gestion de projet</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>Mon rôle</h4>
+                        <ul>
+                            <li class="fragment">Développement d'application côté serveur</li>
+                            <li class="fragment">Un peu de développement côté client</li>
+                            <li class="fragment">Tester mon code (<strong>très important</strong>)</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>Mes projets</h4>
+                        <ul>
+                            <li class="fragment">Fiera Capital</li>
+                            <li class="fragment">Xpertdata</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <img src="http://xpertsea.com/images/facebook-banner.jpg" style="background: white; max-height: 250px;"/>
+                    <ul>
+                        <li class="fragment">Outil pour mesurer les populations de crustacés</li>
+                        <li class="fragment">Xpertdata: Application pour gérer les écloseries</li>
+                        <li class="fragment">Application développée de A à Z</li>
+                        <li class="fragment">ASP.NET MVC5</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Structure de l'application</h3>
+                    <ul>
+                        <li>
+                            <span>Facilité</span>
+                            <span class="fragment">-&gt; Unité</span>
+                            <span class="fragment">-&gt; Tank</span>
+                        </li>
+                        <li class="fragment">
+                            <span>Espèce globale à l'application</span>
+                            <span class="fragment">-&gt; Espèce pour un client</span>
+                            <span class="fragment">-&gt; Population</span>
+                        </li>
+                        <li class="fragment">
+                            Paramètres personnalisés pour une espèce
+                        </li>
+                        <li class="fragment">
+                            Entrée d'un paramètre pour une population à une date
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Difficultées rencontrées</h3>
+                    <section>
+                        <div class="fragment">
+                            <h5>Format des URL</h5>
+                            <p>
+                                GUID comme identifiants <pre style="text-align: center">03872d87-1d35-4c86-bce5-329407aba39c</pre>
+                            </p>
+                        </div>
+                        <div class="fragment">
+                            <br />
+                            <h5>Solution</h5>
+                            <ul>
+                                <li class="fragment">Utiliser des "slugs"</li>
+                                <li class="fragment">Slug unique pour un client et une entité donnée</li>
+                                <li class="fragment">Exemple d'URL: /facilite/a/unite/b1/tank/t4</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="fragment">
+                            Concevoir une architecture optimale pour faire une application robuste
+                        </div>
+                        <div class="fragment">
+                            <br />
+                            <h5>Solution</h5>
+                            <ul>
+                                <li>Mettre les idées sur papier, pseudo-diagrammes</li>
+                                <li>Exposer l'idée aux collègues et en discuter</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="fragment">
+                            Tester au maximum chaque partie de l'application
+                        </div>
+                    </section>
+                    <section>
+                        <pre><code data-trim contenteditable>
+public void ImplementerFonctionnalite(Fonctionnalite fnc)
+{
+    coderLesTests (fnc);
+
+    if ( roulerTests (fnc) ) 
+        throw new InvalidOperationExceptin("Les tests devraient échouer");
+
+    while ( !roulerTests(fnc) )
+    {
+        coderFonctionnalite (fnc);
+    }
+}
+public void BienCoderEtTester(Type classeACoder)
+{
+    while ( !classComplete(classeACoder) ) 
+    {
+        ImplementerFonctionnalite (classeACoder.fonctionnalites.pop());
+    }
+}
+                        </code></pre>
+                    </section>
+                </section>
+                <section>
+                    <h3>Impact de mon travail</h3>
+                    <ol>
+                        <li>Spektrum a pu tenir ses engagements envers le client</li>
+                        <li>Xpertsea va éventuellement diposer d'une application pour accompagner son XperCount</li>
+                        <li>L'application sera bientôt présentée à des clients</li>
+                    </ol>
+                </section>
+                <section>
+                    <h3>Ce que ça ma apporté</h3>
+                    <section>
+                        <h4>Formation reçue</h4>
+                        <ul>
+                            <li class="fragment">Formation via l'exemple et la pratique</li>
+                            <li class="fragment">Échange d'idées avec mes collègues</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>Les cours utiles</h4>
+                        <ul>
+                            <li class="fragment">Programmation et programmation Web</li>
+                            <li class="fragment">Techniques de développement de systèmes</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>Le cours le plus utile de mon DEC</h4>
+                        <br />
+                        <strong class="fragment">Évolution et qualité d'une application</strong>
+                    </section>
+                    <section>
+                        <h3>Connaissances développées</h3>
+                        <ul>
+                            <li class="fragment">Programmation en général</li>
+                            <li class="fragment">Programmation .NET</li>
+                            <li class="fragment">Modélisation de systèmes complexes</li>
+                            <li class="fragment">Bonnes pratiques de développement</li>
+                            <li class="fragment">Méthodologie Agile</li>
+                        </ul>
+                        <pre class="fragment" style="color: red;">Une exception non gérée de type StackOverflow est survenue</pre>
+                    </section>
+                    <section>
+                        <h3>Ce que j'en pense</h3>
+                        <ul>
+                            <li>Projets passionnants</li>
+                            <li>Équipe exceptionnelle</li>
+                            <li>Excellentes conditions de travail</li>
+                            <li>Source infinie de conaissances</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <h3>Conclusion</h3>
+                    <img src="http://az676930.vo.msecnd.net/media/56317/default.jpg" />
                 </section>
 			</div>
 		</div>
